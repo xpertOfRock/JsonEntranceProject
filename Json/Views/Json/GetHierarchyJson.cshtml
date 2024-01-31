@@ -1,0 +1,21 @@
+﻿@model List<Item>
+
+<h1>Configuration Tree</h1>
+
+<div id="configuration-tree"></div>
+
+@section scripts {
+    <script>
+        var configData = @Html.Raw(Json.Serialize(Model));
+        
+        $(function () {
+            $('#configuration-tree').jstree({
+                'core': {
+                    'data': configData
+                }
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+}

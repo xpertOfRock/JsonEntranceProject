@@ -1,0 +1,15 @@
+﻿@using Json.Models
+@model IEnumerable<Item>
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Json Processing</h1>
+            <p class="lead text-body-secondary">Press 'Upload & Process' to upload and save your json file. Press 'Hierarchy Tree' to see it's hierarchy tree.</p>
+            <p>
+                <a asp-area="" asp-controller="Json" asp-action="Upload" class="btn btn-primary my-2">Upload & Process</a>
+                <a asp-area="" asp-controller="Json" asp-action="GetHierarchyJson" class="btn btn-secondary my-2">Hierarchy Tree</a>
+            </p>
+        </div>
+    </div>
+</section>

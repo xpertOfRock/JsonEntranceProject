@@ -1,0 +1,23 @@
+﻿@using Json.ViewModels
+@model InputFileViewModel
+
+@Html.AntiForgeryToken()
+
+<form method="post" asp-action="Upload" enctype="multipart/form-data" id="uploadForm">
+    <div class="form-group">
+        <label asp-for="File">File</label>
+        <input asp-for="File" type="file" class="form-control" id="fileInput" placeholder="Image" required>
+        <span asp-validation-for="File" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary" id="submitButton" disabled>Submit</button>
+</form>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('#fileInput').change(function () {
+                $('#submitButton').prop('disabled', !$(this).val());
+            });
+        });
+    </script>
+}
