@@ -1,0 +1,32 @@
+[
+    {
+        "Id": 1,
+        "ParentId": null,
+        "Name": "Root",
+        "Value": null,
+        "Children": [
+            {
+                "Id": 2,
+                "ParentId": 1,
+                "Name": "Child1",
+                "Value": "Value1",
+                "Children": []
+            },
+            {
+                "Id": 3,
+                "ParentId": 1,
+                "Name": "Child2",
+                "Value": null,
+                "Children": [
+                    {
+                        "Id": 4,
+                        "ParentId": 3,
+                        "Name": "Grandchild1",
+                        "Value": "Value2",
+                        "Children": []
+                    }
+                ]
+            }
+        ]
+    }
+]
